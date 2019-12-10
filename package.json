@@ -1,35 +1,24 @@
 {
-  "name": "js-student-boilerplate",
+  "name": "Project2-FormSubmission",
   "version": "1.0.0",
-  "description": "Boilerplate for JS students.",
-  "main": "index.html",
+  "description": "",
+  "main": "index.js",
   "scripts": {
-    "serve": "npx browser-sync start --server --files '*.html, *.css'"
+    "serve": "npx browser-sync start --server --files '*.html, *.css, *.js'"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/swic-cis-177/js-student-boilerplate.git"
-  },
-  "keywords": [
-    "JavaScript",
-    "ESLint",
-    "ES2015"
-  ],
-  "author": "Manav Misra",
+  "keywords": [],
+  "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/swic-cis-177/js-student-boilerplate/issues"
-  },
-  "homepage": "https://github.com/swic-cis-177/js-student-boilerplate#readme",
   "devDependencies": {
     "browser-sync": "^2.26.7",
-    "eslint": "^6.2.2",
-    "eslint-config-prettier": "^6.1.0",
-    "eslint-plugin-prettier": "^3.1.0",
-    "prettier": "^1.18.2",
-    "stylelint": "^10.1.0",
-    "stylelint-config-prettier": "^5.2.0",
-    "stylelint-config-standard": "^18.3.0",
-    "stylelint-prettier": "^1.1.1"
+    "eslint": "^6.6.0",
+    "eslint-config-prettier": "^6.5.0",
+    "eslint-plugin-prettier": "^3.1.1",
+    "prettier": "1.19.1",
+    "stylelint": "^11.1.1",
+    "stylelint-config-prettier": "^6.0.0",
+    "stylelint-config-recommended": "^3.0.0",
+    "stylelint-prettier": "^1.1.1",
+    "stylelint-vscode": "^7.0.0-6"
   }
 }
