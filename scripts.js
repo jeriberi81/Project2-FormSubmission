@@ -1,6 +1,7 @@
-// Enter a description of this program here.
+// Taking in <form> submissions, adding them to a ‘fake database’ - just an Array in our case, and we are allowing our uses to interact with this data to map or filter out what they need.
 
 /**
- * Write some pseudo code steps here.
- * Use those steps as your `commit` messages (and delete them from here as you complete a step.)
+ * Create an empty array
+ * add fields from the form
+ * create function to add registrants
  */
