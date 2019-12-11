@@ -32,9 +32,10 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
 function namesList(clients)
 {
-  return clients.map(client => '<li>$(client.fName, client.lName)</li>').join(" ");
+  return clients.map(client => `<li>$(client.fName, client.lName)</li>`).join(" ");
 }
 
 document.querySelector("nameList").addEventListener("click", () => {
 document.querySelector("ul").innerHTML = namesList(clients);
-})
+});
+
