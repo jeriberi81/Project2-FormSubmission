@@ -5,9 +5,36 @@
  * add fields from the form
  * create function to add registrants
  */
+const form = document.querySelector("form");
 
+const fName = document.querySelector("fName");
+const lName = document.querySelector("lName");
+const street = document.querySelector("street");
+const city = document.querySelector("city");
+const state = document.querySelector("state");
+const zip = document.querySelector("zip");
+const email = document.querySelector("email");
+const phone = document.querySelector("phone");
+const age = document.querySelector("age");
 
-document.querySelector("form").addEventListener("submit", function(event)){
+const clients = [];
+
+function addClient(fName, lName, street, city, state, zip, email, phone, age)
+{
+  clients.push({fName, lName, street, city, state, zip, email, phone, age
+});
+
+document.querySelector("form").addEventListener("submit", function(event) {
   event.preventDefault();
-};
+  addClient(fName.value, lName.value, street.value,city.value, state.value, zip.value,
+    email.value, phone.value, age.value);
+  });
 
+function namesList(clients)
+{
+  return clients.map(client => '<li>$(client.fName, client.lName)</li>').join(" ");
+}
+
+document.querySelector("nameList").addEventListener("click", () => {
+document.querySelector("ul").innerHTML = namesList(clients);
+})
