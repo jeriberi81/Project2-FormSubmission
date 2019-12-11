@@ -5,3 +5,7 @@
  * add fields from the form
  * create function to add registrants
  */
+document.querySelector("form").addEventListener("submit", function(event)){
+  event.preventDefault();
+};
+
