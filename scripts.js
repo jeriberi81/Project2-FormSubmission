@@ -5,37 +5,73 @@
  * add fields from the form
  * create function to add registrants
  */
-const form = document.querySelector("form");
-
-const fName = document.querySelector("fName");
-const lName = document.querySelector("lName");
-const street = document.querySelector("street");
-const city = document.querySelector("city");
-const state = document.querySelector("state");
-const zip = document.querySelector("zip");
-const email = document.querySelector("email");
-const phone = document.querySelector("phone");
-const age = document.querySelector("age");
-
 const clients = [];
 
-function addClient(fName, lName, street, city, state, zip, email, phone, age)
-{
-  clients.push({fName, lName, street, city, state, zip, email, phone, age
-});
-
-document.querySelector("form").addEventListener("submit", function(event) {
+ document.querySelector("form").addEventListener("submit", function(event) {
   event.preventDefault();
-  addClient(fName.value, lName.value, street.value,city.value, state.value, zip.value,
-    email.value, phone.value, age.value);
-  });
+
+  })
+
+const form = document.querySelector("form");
+
+const fName = form.querySelector("fName");
+const lName = form.querySelector("lName");
+const street = form.querySelector("street");
+const city = form.querySelector("city");
+const state = form.querySelector("state");
+const zip = form.querySelector("zip");
+const email = form.querySelector("email");
+const phone = form.querySelector("phone");
+const sex = form.querySelector("sex");
+
+console.log(lName.value);
+/*function getFormDataFromIds(formEls) {
+  return Array.from(formEls)
+
+     // Remove elements that don't have ids
+    .filter(client => client.id)
+​
+    // The id of the input will be the :key: and the value will be...the value.
+    .map(({ id, value }) => ({
+      [id]: value
+    }))
+​
+    // Combine the separate objects into 1 'data object.'
+    .reduce((accumulator, data) => ({ ...accumulator, ...data }));
+}*/
+
+const client =
+{fName: document.getElementById("fName").value,
+ lName: document.getElementById("lName").value,
+ address: document.getElementById("street").value,
+ city: document.getElementById("city").value,
+ state: document.getElementById("state").value,
+ zip: document.getElementById("zip").value,
+ email: document.querySelector.getElementById("email").value,
+ phone: document.getElementById("phone").value,
+ sex: document.getElementById("sex").value
+};
+console.log(client.fName);
+function addClients(){clients.push(client)};
+
+console.log(clients);
+
+
+
 
 function namesList(clients)
 {
   return clients.map(client => `<li>$(client.fName, client.lName)</li>`).join(" ");
 }
 
+const radios = document.querySelectorAll("input[name='drone']")
+
+  function getRadioValue(radios) {
+
+     return Array.from(radios).filter(radio => radio.checked)[0].value;
+  }
+  // Upon form submission, get the value for the radio element.
+  console.log(getRadioValue(radios));
 document.querySelector("nameList").addEventListener("click", () => {
-document.querySelector("ul").innerHTML = namesList(clients);
-});
+document.querySelector("ul").innerHTML = namesList(clients);})
 
