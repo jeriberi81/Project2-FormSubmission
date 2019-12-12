@@ -13,6 +13,7 @@ document.querySelector("form").addEventListener("submit", function(event) {
 
 const form = document.querySelector("form");
 
+// TODO{jeri.atkins}: Query these using CSS selector for id (#)
 const fName = form.querySelector("fName");
 const lName = form.querySelector("lName");
 const street = form.querySelector("street");
